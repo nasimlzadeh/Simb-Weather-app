@@ -1,0 +1,60 @@
+body {
+  font-family: Comic Sans MS;
+}
+h1 {
+  color: #5a6275;
+  font-size: 42px;
+  margin: 0;
+}
+ul {
+  margin: 0;
+  padding: 0;
+}
+li {
+  list-style: none;
+  margin: 0 0 0 10px;
+  padding: 0;
+}
+.border {
+  border: 1px solid #abaeb6;
+  max-width: 600px;
+  border-radius: 10px;
+  margin: 30px auto;
+  padding: 20px;
+  margin-bottom: 5px;
+  /* margin-top: 30px; */
+}
+.container {
+  margin: 0 auto;
+  max-width: 600px;
+  /* padding: 0; */
+}
+.cityInfo {
+  color: #5a6275;
+  font-size: 18px;
+}
+.details {
+  line-height: 100%;
+}
+.cityWeather {
+  color: #5a6275;
+  font-size: 14px;
+
+  padding: 0 0 0 5px;
+}
+
+.cityTemp {
+  color: #5a6275;
+  font-size: 28px;
+  font-weight: 800;
+  padding: 0 0 0 5px;
+}
+.units {
+  font-size: 18px;
+  position: relative;
+  top: -8px;
+}
+.mainEmoji {
+  /* margin: 10px auto; */
+  padding: 0 5px;
+}
