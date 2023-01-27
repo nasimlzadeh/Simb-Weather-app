@@ -64,3 +64,11 @@ li::first-letter {
   /* margin: 10px auto; */
   padding: 0 5px;
 }
+.active {
+  color: #5a6275;
+  cursor: none;
+  text-decoration: none;
+}
+.active:hover {
+  text-decoration: none;
+}
