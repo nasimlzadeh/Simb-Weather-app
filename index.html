@@ -11,6 +11,7 @@
       crossorigin="anonymous"
     />
     <link rel="stylesheet" href="src/styles.css" />
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
     <title>Simba Weather App</title>
   </head>
   <body>
@@ -18,13 +19,17 @@
       <div class="border">
         <div class="row">
           <div class="col-6">
-            <h1>Tehran</h1>
+            <h1 id="city-name"></h1>
             <ul>
               <li>
-                <span class="cityInfo">Monday 01:01</span>
+                <span class="cityInfo"
+                  ><span id="current-day"></span> <span id="hours"></span>:<span
+                    id="minutes"
+                  ></span
+                ></span>
               </li>
               <li>
-                <span class="cityInfo">Haze</span>
+                <span class="cityInfo" id="weather-icon"></span>
               </li>
             </ul>
           </div>
@@ -37,22 +42,22 @@
             />
           </div>
           <div class="col-4">
-            <span class="cityTemp"
-              >1
-              <span class="units"
-                >°C | <a href="#" target="_blank">°F</a></span
-              ></span
-            >
+            <span id="city-temp"></span>
+            <span class="units">°C | <a href="#" target="_blank">°F</a></span>
             <ul>
               <li class="details">
-                <span class="cityWeather">Humidity: 59%</span>
+                <span class="cityWeather"
+                  >Humidity:<span id="humidity"></span>%</span
+                >
               </li>
               <li class="details">
-                <span class="cityWeather">Wind: 11 km/h</span>
+                <span class="cityWeather"
+                  >Wind: <span id="wind"></span> km/h</span
+                >
               </li>
-              <li class="details">
+              <!-- <li class="details">
                 <span class="cityWeather">pericipitation: 1%</span>
-              </li>
+              </li> -->
             </ul>
           </div>
         </div>
