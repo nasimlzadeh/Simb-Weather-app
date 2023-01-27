@@ -55,4 +55,6 @@ function getCity(event) {
 
 let submitedCity = document.querySelector("#search-city");
 submitedCity.addEventListener("submit", getCity);
+// let submitedCity = document.querySelector("#search-button");
+// submitedCity.addEventListener("click", getCity);
 search("tehran");
