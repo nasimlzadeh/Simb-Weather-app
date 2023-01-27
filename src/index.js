@@ -10,8 +10,13 @@ function showInfo(response) {
   desiredCity.innerHTML = response.data.name;
   let description = document.querySelector("#weather-icon");
   description.innerHTML = response.data.weather[0].description;
-  let timestamp = new Date(response.data.dt * 1000);
-  console.log(timestamp); //new date() receives UNIX in miliseconds and the timestamp provided by openweatherapp is in seconds
+  let timestamp = new Date(response.data.dt * 1000); //new date() receives UNIX in miliseconds and the timestamp provided by openweatherapp is in seconds
+  let iconElement = document.querySelector("#icon");
+  iconElement.setAttribute(
+    "src",
+    `http://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png`
+  );
+  iconElement.setAttribute("alt", `${response.data.weather[0].description}`);
   let days = [
     "Sunday",
     "Monday",
@@ -39,6 +44,6 @@ function showInfo(response) {
   minutes.innerHTML = correctMinutes;
 }
 let apiKey = "d44a337dcba067ff8eff53da085f3633";
-let cityName = "Tehran";
+let cityName = "tehran";
 let apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${cityName}&appid=${apiKey}&units=metric`;
 axios.get(apiUrl).then(showInfo);
